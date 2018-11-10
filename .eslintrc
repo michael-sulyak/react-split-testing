@@ -1,0 +1,48 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint-config-standard",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "space-before-function-paren": 0,
+    "react/jsx-boolean-value": 0,
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      "only-multiline"
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "react/no-unescaped-entities": [
+      "error",
+      {
+        "forbid": [
+          ">",
+          "}"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "16.0"
+    }
+  }
+}
