@@ -1,6 +1,6 @@
 {
-  "name": "react-ab-testing-example",
-  "homepage": "https://expert-m.github.io/react-ab-testing",
+  "name": "react-split-testing-example",
+  "homepage": "https://expert-m.github.io/react-split-testing",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -13,7 +13,7 @@
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "react-ab-testing": "link:../..",
+    "react-split-testing": "link:../..",
     "react-dom": "^16.4.1",
     "react-scripts": "^2.1.1"
   },

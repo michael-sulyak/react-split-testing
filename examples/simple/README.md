@@ -5,4 +5,4 @@
 yarn start
 ```
 
-[back to react-ab-testing](https://github.com/expert-m/react-ab-testing)
+[back to react-split-testing](https://github.com/expert-m/react-split-testing)

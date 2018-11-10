@@ -1,6 +1,6 @@
-# react-ab-testing
+# react-split-testing
 
-[![NPM](https://img.shields.io/npm/v/react-ab-testing.svg?style=flat-square)](https://www.npmjs.com/package/redux-class-decorators)  [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/expert-m/react-ab-testing.svg?style=flat-square)](https://scrutinizer-ci.com/g/expert-m/react-ab-testing/?branch=master)  [![Build Status](https://img.shields.io/scrutinizer/build/g/expert-m/react-ab-testing.svg?style=flat-square)](https://scrutinizer-ci.com/g/expert-m/react-ab-testing/build-status/master)  [![GitHub Issues](https://img.shields.io/github/issues/expert-m/react-ab-testing.svg?style=flat-square)](https://github.com/expert-m/react-ab-testing/issues)  [![Gitter](https://img.shields.io/badge/gitter-join_chat-blue.svg?style=flat-square)](https://gitter.im/expert_m/react-ab-testing)  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![NPM](https://img.shields.io/npm/v/react-split-testing.svg?style=flat-square)](https://www.npmjs.com/package/redux-class-decorators)  [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/expert-m/react-split-testing.svg?style=flat-square)](https://scrutinizer-ci.com/g/expert-m/react-split-testing/?branch=master)  [![Build Status](https://img.shields.io/scrutinizer/build/g/expert-m/react-split-testing.svg?style=flat-square)](https://scrutinizer-ci.com/g/expert-m/react-split-testing/build-status/master)  [![GitHub Issues](https://img.shields.io/github/issues/expert-m/react-split-testing.svg?style=flat-square)](https://github.com/expert-m/react-split-testing/issues)  [![Gitter](https://img.shields.io/badge/gitter-join_chat-blue.svg?style=flat-square)](https://gitter.im/expert_m/react-split-testing)  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 Wrap components in [`<Variant />`](#variant-) and nest in [`<Experiment />`](#experiment-). A variant is chosen randomly and saved to local storage.
 
@@ -15,7 +15,7 @@ Wrap components in [`<Variant />`](#variant-) and nest in [`<Experiment />`](#ex
 </Experiment>
 ```
 
-#### [Example](https://github.com/expert-m/react-ab-testing/tree/master/examples/simple) ([Demo](https://expert-m.github.io/react-ab-testing/))
+#### [Example](https://github.com/expert-m/react-split-testing/tree/master/examples/simple) ([Demo](https://expert-m.github.io/react-split-testing/))
 
 ## Table Of Contents
 - [Installation](#installation)
@@ -32,18 +32,18 @@ Wrap components in [`<Variant />`](#variant-) and nest in [`<Experiment />`](#ex
 
 #### npm
 ```bash
-npm install react-ab-testing
+npm install react-split-testing
 ```
 
 #### yarn
 ```bash
-yarn add react-ab-testing
+yarn add react-split-testing
 ```
 
 ## Usage
 
 ```jsx
-import { Experiment, Variant } from 'react-ab-testing'
+import { Experiment, Variant } from 'react-split-testing'
 
 class App extends Component {
   render() {
@@ -75,7 +75,7 @@ A [`<Experiment />`](#experiment-) with a `userIdentifier` property will choose 
 #### Example
 
 ```jsx
-import { Experiment, Variant } from 'react-ab-testing'
+import { Experiment, Variant } from 'react-split-testing'
 
 class App extends Component {
   render() {

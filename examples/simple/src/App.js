@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Experiment, Variant } from 'react-ab-testing'
+import { Experiment, Variant } from 'react-split-testing'
 
 
 export default class App extends Component {
@@ -79,7 +79,7 @@ export default class App extends Component {
         </div>
 
         <a
-          href="https://github.com/expert-m/react-ab-testing/tree/master/examples/simple"
+          href="https://github.com/expert-m/react-split-testing/tree/master/examples/simple"
           target="_blank"
           rel="noopener noreferrer"
           className="link"

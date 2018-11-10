@@ -1,10 +1,10 @@
 {
-  "name": "react-ab-testing",
-  "version": "1.0.0",
+  "name": "react-split-testing",
+  "version": "1.0.1",
   "description": "Simple A/B testing component for React.",
   "author": "expert-m",
   "license": "MIT",
-  "repository": "expert-m/react-ab-testing",
+  "repository": "expert-m/react-split-testing",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
