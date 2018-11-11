@@ -123,7 +123,7 @@ Experiment container component. Children must be of type [`Variant`](#variant-).
   * `onRawChoice` - Same as `onChoice`, but the objects passed are React component instances.
     * **Optional**
     * **Type:** `function`
-    * **Example:** `(experiment, variant) => { console.log(experimentName.getName(), variantName.getName()) }`
+    * **Example:** `(experiment, variant) => { console.log(experimentName.getName(), variant.props.name) }`
 
 * **Methods:**
   * `getName()` - Returns the [`Experiment`](#experiment-) name.
