@@ -10,6 +10,7 @@ export default class App extends Component {
 
     this.onClick = this.onClick.bind(this)
     this.onChoice = this.onChoice.bind(this)
+    this.onRawChoice = this.onRawChoice.bind(this)
   }
 
   onClick() {
@@ -24,6 +25,14 @@ export default class App extends Component {
     console.log(
       `Experiment name: "${experimentName}"\n` +
       `Variant name: "${variantName}"`
+    )
+  }
+
+  onRawChoice(experiment, variant) {
+    console.log(
+      `Experiment name: "${experiment.getName()}"\n` +
+      `Variant name: "${variant.props.name}"\n` +
+      `Variant weight: ${variant.props.weight}`
     )
   }
 
@@ -55,11 +64,15 @@ export default class App extends Component {
         <div className="block">
           <h1>Experiment #2</h1>
           <span>(userIdentifier="something")</span>
-          <Experiment name="Experiment #2" userIdentifier="something">
+          <Experiment
+            name="Experiment #2"
+            userIdentifier="something"
+            onRawChoice={this.onRawChoice}
+          >
             <Variant name="A">
               <div>Section A</div>
             </Variant>
-            <Variant name="B">
+            <Variant name="B" weight={2}>
               <div>Section B</div>
             </Variant>
           </Experiment>
