@@ -103,7 +103,7 @@ export default class Experiment extends Component {
       return false
     }
 
-    if (element.type.displayName !== 'ExperimentVariant') {
+    if (!element.type.isVariant) {
       throw new Error('Experiment children must be Variant components.')
     }
 

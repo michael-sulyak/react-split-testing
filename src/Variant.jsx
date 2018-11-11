@@ -12,7 +12,7 @@ export default class Variant extends Component {
     ]),
   }
 
-  static displayName = 'ExperimentVariant'
+  static isVariant = true
 
   getName() {
     return this.props.name
