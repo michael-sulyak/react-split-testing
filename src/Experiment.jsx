@@ -29,7 +29,7 @@ export default class Experiment extends Component {
     const isNewExperiment = (
       nextProps.name !== name
       || nextProps.userIdentifier !== userIdentifier
-      || variantName !== nextProps.variantName
+      || nextProps.variantName !== variantName
     )
 
     if (!isNewExperiment && nextProps.children === children) {
@@ -49,11 +49,11 @@ export default class Experiment extends Component {
     return this.props.name
   }
 
-  getVariant(name) {
+  getVariant(variantName) {
     const children = React.Children.toArray(this.props.children)
 
     return children.find(element => (
-      this._isVariant(element) && element.props.name === name
+      this._isVariant(element) && element.props.name === variantName
     ))
   }
 
