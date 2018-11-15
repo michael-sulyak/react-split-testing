@@ -128,6 +128,7 @@ Experiment container component. Children must be of type [`Variant`](#variant-).
 * **Methods:**
   * `getName()` - Returns the [`Experiment`](#experiment-) name.
   * `getActiveVariant()` - Returns the currently displayed [`Variant`](#variant-).
+  * `getActiveVariantName()` - Returns the currently displayed [`Variant`](#variant-) name.
   * `getVariant(variantName)` - Returns the instance of the specified [`Variant`](#variant-) name.
 
 [back to top](#table-of-contents)
