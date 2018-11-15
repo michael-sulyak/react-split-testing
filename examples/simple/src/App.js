@@ -14,10 +14,11 @@ export default class App extends Component {
   }
 
   onClick() {
-    const variantName = this.experiment.current.getActiveVariant().props.name
+    const experiment = this.experiment.current
+    
     alert(
-      `Experiment name: "${this.experiment.current.getName()}"\n` +
-      `Variant name: "${variantName}"`
+      `Experiment name: "${experiment.getName()}"\n` +
+      `Variant name: "${experiment.getActiveVariantName()}"`
     )
   }
 

@@ -45,6 +45,10 @@ export default class Experiment extends Component {
     return this.state.activeVariant
   }
 
+  getActiveVariantName() {
+    return this.state.activeVariant && this.state.activeVariant.props.name
+  }
+
   getName() {
     return this.props.name
   }
