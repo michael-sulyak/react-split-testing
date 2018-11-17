@@ -71,7 +71,7 @@ it('test onRawChoice', () => {
   expect(wrapper.contains(<div>{name}</div>)).toEqual(true)
 })
 
-it('test componentWillReceiveProps', () => {
+it('test componentDidUpdate', () => {
   let name = ''
   const onChoice = (a, b) => name = `${a} ${b}`
 

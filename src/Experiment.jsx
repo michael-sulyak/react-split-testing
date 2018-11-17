@@ -21,23 +21,23 @@ export default class Experiment extends Component {
     super(props)
 
     this.state = {}
-    this.state.activeVariant = this._chooseVariant(this.props, true)
+    this.state.activeVariant = this._chooseVariant(true)
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(prevProps) {
     const { name, children, userIdentifier, variantName } = this.props
     const isNewExperiment = (
-      nextProps.name !== name
-      || nextProps.userIdentifier !== userIdentifier
-      || nextProps.variantName !== variantName
+      prevProps.name !== name
+      || prevProps.userIdentifier !== userIdentifier
+      || prevProps.variantName !== variantName
     )
 
-    if (!isNewExperiment && nextProps.children === children) {
+    if (!isNewExperiment && prevProps.children === children) {
       return
     }
 
     this.setState({
-      activeVariant: this._chooseVariant(nextProps, isNewExperiment),
+      activeVariant: this._chooseVariant(prevProps, isNewExperiment),
     })
   }
 
@@ -61,18 +61,20 @@ export default class Experiment extends Component {
     ))
   }
 
-  _chooseVariant(props, isNewExperiment) {
-    if (props.variantName) {
-      const variant = this.getVariant(props.variantName)
+  _chooseVariant(isNewExperiment) {
+    const { variantName, userIdentifier } = this.props
+
+    if (variantName) {
+      const variant = this.getVariant(variantName)
 
       if (isNewExperiment && variant) {
-        this._onChoice(props, variant)
+        this._onChoice(variant)
       }
 
       return variant
     }
 
-    const children = React.Children.toArray(props.children)
+    const children = React.Children.toArray(this.props.children)
     const activeVariantName = this.state.activeVariant && this.state.activeVariant.props.name
     const variants = [], weights = []
 
@@ -89,7 +91,7 @@ export default class Experiment extends Component {
       weights.push(getWeight(element.props.weight))
     }
 
-    const randomSeed = getUserIdentifier(props.userIdentifier)
+    const randomSeed = getUserIdentifier(userIdentifier)
     const index = weightedRandom(weights, randomSeed)
 
     if (index === -1) {
@@ -97,7 +99,7 @@ export default class Experiment extends Component {
     }
 
     const variant = variants[index]
-    this._onChoice(props, variant)
+    this._onChoice(variant)
 
     return variant
   }
@@ -114,13 +116,15 @@ export default class Experiment extends Component {
     return true
   }
 
-  _onChoice(props, variant) {
-    if (props.onChoice instanceof Function) {
-      props.onChoice(props.name, variant.props.name)
+  _onChoice(variant) {
+    const { onChoice, onRawChoice, name } = this.props
+
+    if (onChoice instanceof Function) {
+      onChoice(name, variant.props.name)
     }
 
-    if (props.onRawChoice instanceof Function) {
-      props.onRawChoice(this, variant)
+    if (onRawChoice instanceof Function) {
+      onRawChoice(this, variant)
     }
   }
 
