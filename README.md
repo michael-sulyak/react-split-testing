@@ -2,6 +2,8 @@
 
 [![NPM](https://img.shields.io/npm/v/react-split-testing.svg?style=flat-square)](https://www.npmjs.com/package/react-split-testing)  [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/expert-m/react-split-testing.svg?style=flat-square)](https://scrutinizer-ci.com/g/expert-m/react-split-testing/?branch=master)  [![Build Status](https://img.shields.io/scrutinizer/build/g/expert-m/react-split-testing.svg?style=flat-square)](https://scrutinizer-ci.com/g/expert-m/react-split-testing/build-status/master)  [![GitHub Issues](https://img.shields.io/github/issues/expert-m/react-split-testing.svg?style=flat-square)](https://github.com/expert-m/react-split-testing/issues)  [![Gitter](https://img.shields.io/badge/gitter-join_chat-blue.svg?style=flat-square)](https://gitter.im/expert_m/react-split-testing)  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
+> A/B testing, also called split testing, is an experiment where two (or more) variants of a webpage are shown to users at random, and is used as a means of determining which variant leads to a better performance. Once a variant wins, it is then shown to all users.
+
 Wrap components in [`<Variant />`](#variant-) and nest in [`<Experiment />`](#experiment-). A variant is chosen randomly and saved to local storage.
 
 ```js
