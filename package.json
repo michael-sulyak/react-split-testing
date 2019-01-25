@@ -1,6 +1,6 @@
 {
   "name": "react-split-testing",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Simple A/B testing component for React.",
   "author": "expert-m",
   "license": "MIT",
@@ -71,12 +71,12 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "^2.1.1",
-    "rollup": "^0.67.3",
+    "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.1.8",
-    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-postcss": "^2.0.0",
     "rollup-plugin-url": "^2.0.1"
   },
   "files": [
