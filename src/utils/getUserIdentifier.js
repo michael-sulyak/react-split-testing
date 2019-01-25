@@ -14,7 +14,7 @@ export default function getIdentifier(userIdentifier) {
     return String(userIdentifier)
   }
 
-  if (!window || !('localStorage' in window)) {
+  if (typeof window === 'undefined' || !('localStorage' in window)) {
     return null
   }
 
