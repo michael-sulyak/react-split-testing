@@ -1,6 +1,6 @@
 {
   "name": "react-split-testing",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Simple A/B testing component for React.",
   "author": "expert-m",
   "license": "MIT",
