@@ -1,6 +1,6 @@
 {
   "name": "react-split-testing",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Simple A/B testing component for React.",
   "author": "expert-m",
   "license": "MIT",
@@ -61,7 +61,7 @@
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
@@ -70,19 +70,16 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "^2.1.1",
+    "react-scripts": "^3.0.1",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-commonjs": "^9.1.8",
-    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.1",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.0.0",
     "rollup-plugin-url": "^2.0.1"
   },
   "files": [
     "dist"
-  ],
-  "resolutions": {
-    "babel-core": "^7.0.0-bridge.0"
-  }
+  ]
 }
